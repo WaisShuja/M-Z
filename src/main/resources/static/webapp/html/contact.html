@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us</title>
+
+    <link href="/webapp/css/contact.css" th:href="@{/webapp/css/contact.css}" rel="stylesheet"/>
+</head>
+
+
+
+
+<body>
+<div class="header">
+    <!-- head -->
+    <h1 class="head">M&Z Painting & Repairs</h1>
+    <!--  Logo -->
+    <img class="image" src="/webapp/images/m&z.png" th:href="@{/webapp/images/m&z.png}" alt="M&Z-logO"/><br />
+
+
+    <li>
+        <a href="/home">Home</a>
+        <a href="/service">Service</a>
+        <a href="/contact">Contact</a>
+        <a href="/about">About us</a>
+    </li>
+
+</div>
+
+
+<p class="fHead">
+    <b> How can we assist ?</b> <br> Call Zubair on
+    <strong>0423492494</strong> or fill out the form below.
+</p>
+
+
+
+<!--  Form  -->
+<div id="form">
+    <form action="/data" method="POST">
+        <br />
+
+        <label for="name">Your Name:</label><br />
+        <input type="text" value="name"  placeholder="" /><br />
+
+        <label for="suburb">Your Suburb</label><br />
+        <input type="text" name="suburb" id="suburb" placeholder="" /><br />
+
+        <label for="email">Email</label><br />
+        <input type="email" value="email"  placeholder="Email" /><br />
+
+        <label for="phone">Phone</label><br />
+        <input type="tel" value="phone" id="phone" placeholder="+61" /><br />
+
+        <label>Please tell us how we can help</label>
+        <br />
+        <textarea type="text" name="textarea" rows="10" cols="40"></textarea><br />
+
+        <div>
+            <input class="submit" type="submit" value="Submit" />
+            <br /><br />
+        </div>
+    </form>
+</div>
+
+
+
+<!--  Footer  -->
+<footer class="footer">
+    <a class="fa fa-facebook" style="color:rgb(241, 243, 239);" href="https://www.facebook.com/M&Z.painting.au/" target="_blank"></a>
+    <a href="mailto:mz_painting@yahoo.com" class="email"> mz_painting@yahoo.com</a>
+    <p>&COPY;M&ZP-R 2021</p>
+</footer>
+</body>
+</html>

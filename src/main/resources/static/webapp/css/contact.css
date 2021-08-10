@@ -1,0 +1,376 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: auto;
+}
+
+h1 {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  font-size: 2em;
+  text-shadow: 0px 3px 2px rgb(212, 92, 12);
+  animation: headOne 5s infinite;
+}
+
+@keyframes headOne {
+  0% {
+    color: black;
+  }
+  30% {
+    color: red;
+  }
+  50% {
+    color: purple;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: chocolate;
+  }
+}
+
+/* Logo */
+.image {
+  position: absolute;
+  width: 15%;
+  height: auto;
+  right: 1%;
+  top: -0px;
+  margin-left: 10px;
+  animation: logoo 4s 2;
+  animation-fill-mode: forwards;
+}
+@keyframes logoo {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  30% {
+    opacity: 0.3;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(0.7);
+  }
+  80% {
+    opacity: 0.75;
+    transform: scale(0.8);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY();
+  }
+}
+
+.fHead {
+  font-size: 25px;
+}
+/*  Form  */
+#form {
+  background: url("../images/color1.jpg") center/cover, no-repeat;
+  text-align: left;
+  padding-left: 15%;
+  font-size: 130%;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+#form label,
+input {
+  font-size: 100%;
+  width: auto;
+}
+
+#form .submit {
+  color: rgb(0, 0, 10);
+  font-size: 80%;
+  cursor: pointer;
+  margin-bottom: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+}
+/* Footer */
+.footer {
+  display: flex;
+  background: rgba(0, 0, 0, 0.795);
+  font-size: 140%;
+  width: 100%;
+  justify-content: center;
+}
+
+.fa-facebook {
+  color: rgb(255, 255, 255);
+  background: rgb(7, 84, 156);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin: 3px 0;
+  padding: 20px;
+}
+
+.footer a {
+  color: rgba(247, 244, 57, 0.952);
+  text-decoration: none;
+  padding: 20px;
+}
+
+/*
+**************************************** Ipad Size *****************************************/
+
+@media screen and (max-width: 790px) {
+  .image {
+    position: absolute;
+    width: 14%;
+    height: auto;
+    top: 0;
+    right: 0;
+    margin: 0px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    animation: logoo 2s 2;
+    animation-fill-mode: forwards;
+  }
+  @keyframes logoo {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    30% {
+      opacity: 0.3;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(0.7);
+    }
+    80% {
+      opacity: 0.75;
+      transform: scale(0.8);
+    }
+    90% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  h1 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: 1.8em;
+    text-shadow: 0px 3px 2px rgb(212, 92, 12);
+    animation: headOne 5s infinite;
+  }
+  @keyframes headOne {
+    0% {
+      color: black;
+    }
+    30% {
+      color: red;
+    }
+    50% {
+      color: purple;
+    }
+    75% {
+      color: green;
+    }
+    100% {
+      color: chocolate;
+    }
+  }
+
+  /*  Form Text */
+  .fHead {
+    font-size: 20px;
+  }
+  /*  Form  */
+  #form {
+    background: url("../images/color1.jpg") center/cover, no-repeat;
+    text-align: left;
+    padding-left: 15%;
+    font-size: 130%;
+  }
+  #form label,
+  input {
+    font-size: 100%;
+    width: auto;
+  }
+
+  #form .submit {
+    color: rgb(0, 0, 10);
+    font-size: 80%;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+  }
+
+  /* Footer */
+  .footer {
+    display: flex;
+    background: rgba(0, 0, 0, 0.795);
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+  }
+  .fa-facebook {
+    color: rgb(255, 255, 255);
+    background: rgb(7, 84, 156);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin: 3px 0;
+    padding: 20px;
+  }
+
+  .footer a {
+    text-decoration: none;
+    padding: 15px;
+  }
+  .footer fa-facebook {
+    font-size: 20px;
+  }
+
+  .footer p {
+    color: rgb(17, 1, 1);
+    font-size: 15px;
+    font-weight: 50;
+  }
+}
+
+/*
+ **************************************** Mobile Size *****************************************
+ */
+@media screen and (max-width: 470px) {
+  body {
+    /* background: papayawhip; */
+    margin: auto 0;
+    margin-left:2px;
+  }
+
+  /* logo */
+  .image {
+    position: absolute;
+    width: 15%;
+    height: auto;
+    right: 2%;
+    top: -1px;
+    margin-left: 10px;
+    animation: logoo 3s 2;
+    animation-fill-mode: forwards;
+  }
+  @keyframes logoo {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    30% {
+      opacity: 0.3;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(0.7);
+    }
+    80% {
+      opacity: 0.75;
+      transform: scale(0.8);
+    }
+    90% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY();
+    }
+  }
+
+  h1 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    text-shadow: 0px 3px 2px rgb(212, 92, 12);
+    font-size:90%
+    animation: headOne 5s infinite;
+  }
+
+  @keyframes headOne {
+    0% {
+      color: black;
+    }
+    30% {
+      color: red;
+    }
+    50% {
+      color: purple;
+    }
+    75% {
+      color: green;
+    }
+    100% {
+      color: chocolate;
+    }
+  }
+
+  .fHead {
+    font-size: 15px;
+  }
+  /*  Form  */
+  #form {
+    overflow: hidden;
+    background: url("../images/color1.jpg") center/cover, no-repeat;
+    text-align: left;
+    padding-left: 10%;
+    font-size: 130%;
+    margin-bottom: 0;
+  }
+  #form label,
+  input {
+    overflow: hidden;
+    font-size: 60%;
+    width: auto;
+  }
+
+  #form .submit {
+    color: rgb(0, 0, 10);
+    font-size: 80%;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+  }
+  /* Footer */
+.footer {
+    display: flex;
+    background: rgba(0, 0, 0, 0.795);
+    font-size: 110%;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+  }
+  .fa-facebook {
+    color: rgb(255, 255, 255);
+    background: rgb(7, 84, 156);
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .footer a {
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(217, 245, 115);
+  }
+}

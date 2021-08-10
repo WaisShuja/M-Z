@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <link href="/webapp/css/mainStyle.css" th:href="@{/webapp/css/mainStyle.css}" rel="stylesheet" />
+
+</head>
+<body>
+
+
+<!-- Head-Menu -->
+<div class="header">
+    <div id="menu">
+        <!-- head -->
+        <h1 class="head">M&Z Painting & Repairs</h1>
+
+        <!--  Logo -->
+        <img class="image" src="/webapp/images/m&z.png" th:href="@{/webapp/images/m&z.png}" alt="M&Z-logO"/><br />
+
+        <li>
+            <a href="/home">Home</a>
+            <a href="/service">Service</a>
+            <a href="/contact">Contact</a>
+            <a href="/about">About us</a>
+        </li>
+    </div>
+</div>
+
+<!-- Call Button-->
+<a href="tel:+61423492494" id="call">Call us</a>
+
+<!-- Main Display Picture-->
+<div class="container1"></div>
+<div class="container">
+    <!--  Get a Quote -->
+    <a href="/webapp/html/contact.html" th:href="@{/webapp/html/contact.html}"> GET A FREE QUOTE </a>
+</div>
+<p class="needPainter">
+    Need a painter ? <br />
+    Proudly serving all around Australia
+</p>
+
+<!--  Body Page -->
+
+<div class="allPage">
+
+    <h2 style="color: rgb(136, 36, 36); margin: 0; padding: 0"> Skills & Capabilities</h2>
+
+<!--    Bullet Points on Home Page -->
+    <div class="skills">
+        <b>Sydeny CBD</b><br />
+        <div class="skill-line"> &bull; Well versed in all facets of professional painting and touch ups</div>
+
+        <div class="skill-line"> &bull; Expert in using of hand and power painting tools </div>
+
+        <div class="skill-line">&bull; knowledge of standards commercial painting procedures </div>
+
+        <div class="skill-line">&bull; Demonstrates ability to read, write and follow instructions </div>
+
+        <div class="skill-line"> &bull; Well aware of state approved safety policies and procedures
+            regarding commercial painting </div>
+    </div>
+
+
+    <!-- Service Images -->
+
+    <div class="serviceImages">
+        <span class="interior">Interior</span>
+        <img src="/webapp/images/color.10.jpg" th:href="@{/webapp/images/color10.jpg}" id="col2" alt="col2" />
+        <img src="/webapp/images/color1.jpg" th:href="@{/webapp/images/color1.jpg}" id="col1" alt="col1" />
+        <span class="exterior">Exterior</span>
+    </div>
+
+    <br />
+    <br />
+
+
+<!--    Form -->
+
+    <div id="form">
+        <form action="/data" method="POST">
+            <br />
+
+            <label for="name">Your Name:</label><br />
+            <input type="text" name="name" id="name" placeholder="" /><br />
+
+            <label for="suburb">Your Suburb</label><br />
+            <input type="text" name="suburb" id="suburb" placeholder="" /><br />
+
+            <label for="">Email</label><br />
+            <input type="email" name="email" id="" placeholder="" /><br />
+
+            <label for="phone">Phone</label><br />
+            <input type="tel" name="phone" id="phone" placeholder="+61" /><br />
+
+            <label>Please tell us how we can help</label>
+            <br />
+            <textarea type="text" name="textarea" rows="10" cols="40"></textarea
+            ><br />
+
+
+            <div>
+                <input class="submit" type="submit" value="Submit"  />
+                <br /><br />
+            </div>
+        </form>
+    </div>
+
+<!-- Footer  -->
+
+<div class="footer">
+<!--    Facebook-->
+    <a class="fa fa-facebook" style="color:rgb(241, 243, 239);" href="https://www.facebook.com/M&Z.painting.au/" target="_blank"></a>
+<!--    Email-->
+    <a href="mailto:mz_painting@yahoo.com" class="email"> mz_painting@yahoo.com</a>
+    <img src="../images/fBlue.png" alt="facebook" width="30px" />
+    </a> -->
+
+    <p>&COPY;M&ZP-R 2020</p>
+</div>
+</body>
+</html>

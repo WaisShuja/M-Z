@@ -1,0 +1,280 @@
+body {
+  margin: 0 0;
+  background:pink;
+}
+
+/* Image and Text inside */
+.container {
+  position: relative;
+  text-align: center;
+  background: rgb(162, 169, 175);
+}
+
+/* Pro Exper */
+.allPage {
+  min-height: calc(100vh - 20px);
+  min-width: fit-content;
+  background: rgba(203, 210, 218, 0.3);
+  padding: 2%;
+  border-radius: 12px;
+}
+
+
+/* logo */
+.image {
+  position: absolute;
+  width: 12%;
+  height: auto;
+  right: 1%;
+  top: -0px;
+  margin-left: 10px;
+}
+
+h1 {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+  font-size: 2.3em;
+  text-shadow: 0px 3px 2px rgb(212, 92, 12);
+  animation: headOne 5s infinite;
+}
+
+@keyframes headOne {
+  0% {
+    color: black;
+  }
+  30% {
+    color: red;
+  }
+  50% {
+    color: purple;
+  }
+  75% {
+    color: green;
+  }
+  100% {
+    color: chocolate;
+  }
+}
+
+/*  Edu */
+#proEx {
+  text-align: center;
+}
+
+h3 {
+  font-size: 2em;
+  color: chocolate;
+}
+
+/* Footer */
+
+.footer {
+  display: flex;
+  background: rgba(0, 0, 0, 0.795);
+  font-size: 140%;
+  width: 100%;
+  justify-content: center;
+}
+
+.fa-facebook {
+  color: rgb(255, 255, 255);
+  background: rgb(7, 84, 156);
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  margin: 3px 0;
+  padding: 20px;
+}
+
+.footer a {
+  color: rgba(247, 244, 57, 0.952);
+  text-decoration: none;
+  padding: 20px;
+}
+
+/*
+***************************         For Mobile screen      **************************************/
+@media screen and (max-width: 480px) {
+  body {
+    margin: 0 0;
+    /* font-size: 1em; */
+  }
+
+  /* Image and Text inside */
+  .container {
+    position: relative;
+    text-align: center;
+    background: rgb(162, 169, 175);
+  }
+
+  /* Pro Exper */
+  .allPage {
+    min-height: calc(100vh - 20px);
+    min-width: fit-content;
+    background: rgba(203, 210, 218, 0.3);
+    padding: 2%;
+    border-radius: 12px;
+  }
+  .image {
+    position: absolute;
+    width: 15%;
+    height: auto;
+    top: 5px;
+    right: 0;
+    margin: 0px;
+    margin-top: 0px;
+    box-sizing: border-box;
+  }
+  h1 {
+    /* display: inline-block; */
+    font-size: 1.3em;
+    padding-left: 1%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 1;
+  }
+  /*  Edu */
+  #proEx {
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 2em;
+    color: chocolate;
+  }
+
+  /* Footer */
+  .footer {
+    display: flex;
+    background: rgba(0, 0, 0, 0.795);
+    font-size: 110%;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+  }
+  .fa-facebook {
+    color: rgb(255, 255, 255);
+    background: rgb(7, 84, 156);
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .footer a {
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(217, 245, 115);
+  }
+}
+
+
+
+/*
+***************************         For Ipad  screen      **************************************/
+@media screen and (max-width: 790px) {
+  body {
+    margin: 0 0;
+    /* font-size: 1em; */
+  }
+
+  /* Image and Text inside */
+  .container {
+    position: relative;
+    text-align: center;
+    background: rgb(162, 169, 175);
+  }
+
+  /* Pro Exper */
+  .allPage {
+    min-height: calc(100vh - 20px);
+    min-width: fit-content;
+    background: rgba(203, 210, 218, 0.3);
+    padding: 2%;
+    border-radius: 12px;
+  }
+  .image {
+    position: absolute;
+    width: 14%;
+    height: auto;
+    top: 0;
+    right: 8px;
+    margin: 0px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    animation: logoo 2s 2;
+    animation-fill-mode: forwards;
+  }
+
+  h1 {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: 1.5em;
+    text-shadow: 0px 3px 2px rgb(199, 19, 130);
+    animation: headOne 5s infinite;
+  }
+
+  @keyframes headOne {
+    0% {
+      color: black;
+    }
+    30% {
+      color: red;
+    }
+    50% {
+      color: purple;
+    }
+    75% {
+      color: green;
+    }
+    100% {
+      color: chocolate;
+    }
+  }
+
+  /*  Edu */
+  #proEx {
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 2em;
+    color: chocolate;
+  }
+
+  /* Footer */
+  .footer {
+    display: flex;
+    background: rgba(0, 0, 0, 0.795);
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+  }
+  .fa-facebook {
+    color: rgb(255, 255, 255);
+    background: rgb(7, 84, 156);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin: 3px 0;
+    padding: 20px;
+  }
+
+  .footer a {
+    text-decoration: none;
+    padding: 15px;
+  }
+  .footer fa-facebook {
+    font-size: 20px;
+  }
+
+  .footer p {
+    color: rgb(17, 1, 1);
+    font-size: 15px;
+    font-weight: 50;
+  }
+}

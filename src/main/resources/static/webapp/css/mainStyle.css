@@ -1,0 +1,1005 @@
+/****************************** New Styling **************************************/
+/* DESKTOP SIZE FROM NOW ON */
+
+@media screen and (min-width: 790px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  :root {
+    --headerShad: 2px 4px 2px rgb(31, 214, 101);
+  }
+  /* LogoImage RRRRRRRRRRRR */
+
+  .image {
+    position: absolute;
+    width: 13%;
+    height: auto;
+    top: -5px;
+    right: 0;
+    margin: 0px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    animation: logoo 2s 2;
+    animation-fill-mode: forwards;
+  }
+  @keyframes logoo {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    30% {
+      opacity: 0.3;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(0.7);
+    }
+    80% {
+      opacity: 0.75;
+      transform: scale(0.8);
+    }
+    90% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /*  head1  RRRRRR */
+  .head {
+    /* display: inline-block; */
+    font-size: 2em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    padding-left: 0;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0px 3px 2px rgb(9, 224, 38);
+    animation: headOne 5s infinite;
+  }
+  @keyframes headOne {
+    0% {
+      color: black;
+    }
+    30% {
+      color: red;
+    }
+    50% {
+      color: purple;
+    }
+    75% {
+      color: green;
+    }
+    100% {
+      color: chocolate;
+    }
+  }
+
+  #menu {
+    overflow: hidden;
+    background: white;
+    width: 100%; /* Full width */
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    z-index: 3;
+  }
+
+  /* Links inside the navbar */
+  #menu a {
+    /* position: block; */
+    display: inline-block;
+    color: rgb(255, 253, 254);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0.6em 0.9em;
+    margin: 0.5em;
+    text-decoration: none;
+    font-size: 120%;
+    outline: 0.04em solid white;
+    outline-offset: -7px;
+    transition: all 0.5s ease;
+  }
+
+  #menu a:hover {
+    /* color: rgb(34, 12, 158); */
+    transform: scale(1.1);
+    outline: none;
+    background: rgb(185, 169, 169);
+    font-size: 120%;
+  }
+
+  /*  Call Button RRRRRRR */
+  #call {
+    position: fixed;
+    font-weight: bold;
+    font-size: 140%;
+    top: 10rem;
+    text-decoration: none;
+    right: 5%;
+    padding: 1%;
+    color: rgb(235, 34, 8);
+    background: rgb(161, 228, 228);
+    animation-name: call;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  /*  Call Button Animation */
+
+  @keyframes call {
+    0% {
+      color: rgb(216, 131, 21);
+    }
+    50% {
+      color: rgb(126, 20, 85);
+    }
+    80% {
+      color: red;
+    }
+    100% {
+      color: rgb(180, 209, 18);
+    }
+  }
+
+  /*  Whole page covering */
+  .allPage {
+    min-height: calc(100vh - 40px);
+    min-width: auto;
+
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  /* Main picture -> Image and Text inside    RRRRRRRR  */
+  .container {
+    background: url("../webapp/images/color13.jpg") center/cover, no-repeat;
+    background-attachment: fixed;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  /* Get A QUOTE  TEXT RRRRRR */
+  .container a {
+    font-size: 22px;
+    text-decoration: none;
+    color: rgb(155, 12, 155);
+    background-color: rgb(243, 236, 243);
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 15px;
+    animation: colory 5s infinite;
+  }
+  /* getQoute hover */
+  .container a:hover {
+    color: blue;
+    background: #fff;
+  }
+
+  @keyframes colory {
+    0% {
+      color: blue;
+      background: pink;
+    }
+    30% {
+      color: red;
+      background: khaki;
+    }
+
+    50% {
+      color: green;
+      background: rgb(211, 139, 211);
+    }
+    80% {
+      background: rgb(44, 215, 228);
+      color: black;
+      transform: scale(1.1);
+    }
+    100% {
+      color: blue;
+      background: coral;
+    }
+  }
+
+  /*  RRRRRRRRRRRR   */
+  .needPainter {
+    position: absolute;
+    /* font-weight: bold; */
+    font-size: 1.3rem;
+    top: 8%;
+    left: 10%;
+    right: 40%;
+    width: fit-content;
+    animation: need 20s infinite;
+  }
+
+  @keyframes need {
+    0% {
+      color: black;
+      background: rgb(122, 236, 179);
+    }
+    50% {
+      color: white;
+      background: rgba(99, 96, 96, 0.4);
+    }
+    100% {
+      color: rgb(30, 10, 204);
+      background: rgba(233, 137, 108, 0.7);
+    }
+  }
+  /* Get a Qoute text in the first page  RRRRRRRRRRR */
+
+  .skills {
+    font-family: "Times New Roman", Times, serif;
+    font-style: oblique;
+    font-size: 25px;
+    background: url('../images/color2.jpg') center/contain, repeat;
+    color: rgb(155, 8, 123);
+    padding: 10px;
+    margin: 1%;
+    border: 1% gray ridge;
+    border-radius: 0.4em;
+    line-height: 2.5em;
+    font-weight: bold;
+    animation: skillss 9s infinite;
+  }
+
+  @keyframes skillss {
+    0% {
+      color: rgb(155, 8, 123);
+    }
+    100% {
+      color: black;
+    }
+  }
+
+  /*  RRRRRRRR  */
+  .serviceImages {
+    display: inline-block;
+    text-align: center;
+  }
+  #col1 {
+    width: 500px;
+    height: 400px;
+    margin: 3px;
+    border-radius: 3em;
+  }
+  .exterior {
+    position: absolute;
+    transform: translate(-250px, 200px);
+    color: rgb(0, 0, 7);
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 0px 5px 5px rgb(4, 252, 4);
+  }
+
+  .skill-line {
+    background: rgba(200, 200, 200, 0.4);
+  }
+  #col2 {
+    width: 500px;
+    height: 400px;
+    margin: 3px;
+    border-radius: 3em;
+  }
+  .interior {
+    position: absolute;
+    transform: translate(230px, 200px);
+    color: rgb(0, 0, 7);
+    font-size: 32px;
+    font-weight: bold;
+    text-shadow: 0px 5px 5px rgb(4, 243, 4);
+  }
+  #col3 {
+    width: 490px;
+    height: 400px;
+    margin: 3px;
+    border-radius: 3em;
+  }
+
+  /*  Form  */
+  #form {
+    background: url("../images/color1.jpg") center/cover, no-repeat;
+    text-align: left;
+    padding-left: 15%;
+    font-size: 130%;
+  }
+  #form label,
+  input {
+    font-size: 100%;
+    width: auto;
+  }
+
+  #form .submit {
+    color: rgb(0, 0, 10);
+    font-size: 80%;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+  }
+  .footer {
+    display: flex;
+    background: rgba(0, 0, 0, 0.795);
+    font-size: 140%;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .fa-facebook {
+    color: rgb(255, 255, 255);
+    background: rgb(7, 84, 156);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin: 3px 0;
+    padding: 20px;
+  }
+
+  .footer a {
+    color: rgba(247, 244, 57, 0.952);
+    text-decoration: none;
+    padding: 20px;
+  }
+
+}
+
+
+
+
+
+
+
+
+/*
+***************************** New Styling **************************************/
+
+/*  iPad devices' screen size */
+
+@media screen and (max-width: 790px) {
+  /* LogoImage RRRRRRRRRRRR */
+
+  .image {
+    position: absolute;
+    width: 14%;
+    height: auto;
+    top: 0;
+    right: 0;
+    margin: 0px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    animation: logoo 2s 2;
+    animation-fill-mode: forwards;
+  }
+  @keyframes logoo {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    30% {
+      opacity: 0.3;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(0.7);
+    }
+    80% {
+      opacity: 0.75;
+      transform: scale(0.8);
+    }
+    90% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /*  head1  RRRRRR */
+  .head {
+    /* display: inline-block; */
+    font-size: 30px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    padding-left: 0;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0px 3px 2px rgb(9, 224, 38);
+    animation: headOne 5s infinite;
+  }
+  @keyframes headOne {
+    0% {
+      color: black;
+    }
+    30% {
+      color: red;
+    }
+    50% {
+      color: purple;
+    }
+    75% {
+      color: green;
+    }
+    100% {
+      color: chocolate;
+    }
+  }
+
+  #menu {
+    overflow: hidden;
+    background: white;
+    width: 100%; /* Full width */
+    text-align: center;
+    list-style-type: none;
+  }
+
+  /* Links inside the navbar */
+  #menu a {
+    /* position: block; */
+    display: inline-block;
+    color: rgb(255, 253, 254);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0.6em 0.9em;
+    text-decoration: none;
+    font-size: 100%;
+    outline: 0.04em solid white;
+    outline-offset: -7px;
+
+    /* Transition */
+    transition: all 0.5s ease;
+  }
+
+  #menu a:hover {
+    transform: scale(1.1);
+    outline: none;
+    background: rgb(185, 169, 169);
+    font-size: 120%;
+  }
+
+  /*  Call Button RRRRRRR */
+  #call {
+    position: fixed;
+    font-weight: bold;
+    font-size: 140%;
+    top: 10rem;
+    text-decoration: none;
+    right: 5%;
+    padding: 1%;
+    color: rgb(235, 34, 8);
+    background: rgb(161, 228, 228);
+    animation-name: call;
+    animation-duration: 0.9s;
+    animation-iteration-count: infinite;
+  }
+
+  /*  Call Button Animation */
+
+  @keyframes call {
+    0% {
+      color: rgb(216, 131, 21);
+    }
+    50% {
+      color: rgb(126, 20, 85);
+    }
+    80% {
+      color: red;
+    }
+    100% {
+      color: rgb(180, 209, 18);
+    }
+  }
+
+  /*  Whole page covering */
+  .allPage {
+    min-height: calc(100vh - 40px);
+    min-width: auto;
+
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  /* Main picture -> Image and Text inside    RRRRRRRR  */
+  .container {
+    background: url("../images/color.10.jpg") top/cover, no-repeat;
+    background-attachment: fixed;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  /* Get A QUOTE  TEXT RRRRRR */
+  .container a {
+    font-size: 17px;
+    text-decoration: none;
+    color: rgb(155, 12, 155);
+    background-color: rgb(243, 236, 243);
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 15px;
+    animation: colory 5s infinite;
+  }
+  /* getQoute hover */
+  .container a:hover {
+    color: blue;
+    background: #fff;
+  }
+
+  /* Get Free Quote Text */
+  @keyframes colory {
+    0% {
+      color: blue;
+      background: pink;
+    }
+    30% {
+      color: red;
+      background: khaki;
+    }
+
+    50% {
+      color: green;
+      background: rgb(211, 139, 211);
+    }
+    80% {
+      background: rgb(44, 215, 228);
+      color: black;
+      transform: scale(1.1);
+    }
+    100% {
+      color: blue;
+      background: coral;
+    }
+  }
+
+  /*  RRRRRRRRRRRR   */
+  .needPainter {
+    position: absolute;
+    font-weight: bold;
+    font-size: 18px;
+    top: 7%;
+    left: 10%;
+    right: 40%;
+    width: fit-content;
+    animation: need 10s infinite;
+  }
+
+  /*  Painter needed Australia text */
+  @keyframes need {
+    0% {
+      color: black;
+    }
+
+    100% {
+      color: rgb(30, 10, 204);
+    }
+  }
+  /* Get a Qoute text in the first page  RRRRRRRRRRR */
+
+  .skills {
+    font-family: "Times New Roman", Times, serif;
+    font-style: oblique;
+    font-size: 19px;
+    background: url("../images/color2.jpg") center/contain, repeat;
+    color: rgb(155, 8, 123);
+    padding: 10px;
+    margin: 1%;
+    border: 1% gray ridge;
+    border-radius: 0.4em;
+    line-height: 2.5em;
+    font-weight: bold;
+    animation: skillss 9s infinite;
+  }
+
+  @keyframes skillss {
+    0% {
+      color: rgb(155, 8, 123);
+    }
+    100% {
+      color: black;
+    }
+  }
+  .skill-line {
+    background: rgba(200, 200, 200, 0.4);
+  }
+  /*  Service Images on the Sreen */
+  .serviceImages {
+    display: inline-block;
+    text-align: center;
+  }
+  #col1 {
+    width: 450px;
+    height: auto;
+    margin: 3px;
+    border-radius: 3em;
+  }
+  #col2 {
+    width: 450px;
+    height: 300px;
+    margin: 3px;
+    border-radius: 3em;
+  }
+  .interior {
+    position: absolute;
+    transform: translate(230px, 200px);
+    color: rgb(0, 0, 7);
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 0px 5px 2px rgb(40, 4, 243);
+  }
+  .exterior {
+    position: absolute;
+    transform: translate(-250px, 200px);
+    color: rgb(0, 0, 7);
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 0px 5px 2px rgb(4, 252, 4);
+  }
+  #col3 {
+    width: 450px;
+    height: 300px;
+    margin: 3px;
+    border-radius: 3em;
+  }
+
+  /*  Form  */
+  #form {
+    background: url("../images/color1.jpg") center/cover, no-repeat;
+    text-align: left;
+    padding-left: 15%;
+    font-size: 130%;
+  }
+  #form label,
+  input {
+    font-size: 100%;
+    width: auto;
+  }
+
+  #form .submit {
+    color: rgb(0, 0, 10);
+    font-size: 80%;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+  }
+  .footer {
+    display: flex;
+    background: rgba(0, 0, 0, 0.795);
+    font-size: 20px;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+  }
+  .fa-facebook {
+    color: rgb(255, 255, 255);
+    background: rgb(7, 84, 156);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin: 3px 0;
+    padding: 20px;
+  }
+
+  .footer a {
+    text-decoration: none;
+    padding: 15px;
+    color: khaki;
+  }
+  .footer fa-facebook {
+    font-size: 20px;
+  }
+
+  .footer p {
+    color: rgb(17, 1, 1);
+    font-size: 15px;
+    font-weight: 50;
+  }
+}
+
+
+
+
+
+
+
+/*
+/*
+***************************** New Styling **************************************/
+/*  This is for Mobile Size ( 0px to 480px  */
+
+@media screen and (max-width: 500px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* LogoImage */
+
+  .image {
+    position: absolute;
+    width: 15%;
+    height: auto;
+    top: 5px;
+    right: 0;
+    margin: 0px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    animation: logoo 2s 2;
+    animation-fill-mode: forwards;
+  }
+  @keyframes logoo {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    30% {
+      opacity: 0.3;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(0.7);
+    }
+    80% {
+      opacity: 0.75;
+      transform: scale(0.8);
+    }
+    90% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY();
+    }
+  }
+  /*  head1 */
+  .head {
+    /* display: inline-block; */
+    font-size: 120%;
+    padding-left: 1%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 1;
+    text-shadow: 0px 3px 2px rgb(9, 224, 38);
+    animation: headOne 5s infinite;
+  }
+  @keyframes headOne {
+    0% {
+      color: black;
+    }
+    30% {
+      color: red;
+    }
+    50% {
+      color: purple;
+    }
+    75% {
+      color: green;
+    }
+    100% {
+      color: chocolate;
+    }
+  }
+
+  #menu {
+    overflow: hidden;
+    background: white;
+    width: 100%; /* Full-width; */
+    text-align: center;
+    margin-bottom: 6px;
+    list-style-type: none;
+  }
+
+  /* Links inside the navbar */
+  #menu a {
+    display: inline-block;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    /* float: right; */
+    padding: 1%;
+    text-decoration: none;
+    font-size: 90%;
+    outline: 0.01em solid white;
+    outline-offset: -2px;
+    transition: all 0.5s;
+  }
+
+  #menu a:hover {
+    color: blue;
+    font-size: 95%;
+  }
+
+  /*  Call Button */
+  #call {
+    position: fixed;
+    font-weight: bold;
+    font-size: 120%;
+    top: 9rem;
+    text-decoration: none;
+    right: auto;
+
+    padding: 1%;
+    color: rgba(41, 7, 121, 0.9);
+    background: rgba(245, 239, 239, 0.6);
+  }
+  #call:hover {
+    color: red;
+    background: rgb(218, 172, 218);
+  }
+  /*  Whole page covering */
+  .allPage {
+    min-height: calc(100vh - 40px);
+    min-width: auto;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  /* Main picture -> Image and Text inside */
+
+  .container {
+    background: url('../images/color16.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 460px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+  }
+
+  /*  Get A QUOTE  TExt  */
+  .container a {
+    font-size: 100%;
+    text-decoration: none;
+    color: rgb(155, 12, 155);
+    background-color: rgb(248, 244, 248);
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 15px;
+  }
+  /* getQoute hover */
+  .container a:hover {
+    color: blue;
+    background: #fff;
+  }
+  .needPainter {
+    position: absolute;
+    font-weight: bold;
+    font-size: 90%;
+    top: 10%;
+    width: fit-content;
+  }
+
+  /* Get a Qoute text in the first page */
+
+  .skills {
+    font-family: "Times New Roman", Times, serif;
+    font-style: oblique;
+    font-size: 90%;
+    background-color: rgba(216, 220, 224, 0.5);
+    background: url("../images/color2.jpg");
+    /* background-repeat: no-repeat; */
+    background-position: center;
+    color: rgb(155, 8, 123);
+    padding: 10px;
+    margin: 1%;
+    border: 1% gray ridge;
+    border-radius: 0.4em;
+    line-height: 1.5em;
+    font-weight: bold;
+    animation: skillss 9s infinite;
+  }
+
+  @keyframes skillss {
+    0% {
+      color: rgb(155, 8, 123);
+    }
+    100% {
+      color: black;
+    }
+  }
+  .skill-line {
+    background: rgba(200, 200, 200, 0.4);
+  }
+
+  /* Images on the page */
+  .serviceImages {
+    display: inline-block;
+    text-align: center;
+  }
+
+  /* Interior Image */
+  #col1 {
+    width: 350px;
+    height: 35vh;
+    margin: 3px;
+    border-radius: 3em;
+  }
+  .interior {
+    position: absolute;
+    transform: translate(130px, 100px);
+    color: rgb(0, 0, 7);
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 0px 5px 2px rgb(40, 4, 243);
+  }
+  /* Exterior Image */
+
+  .exterior {
+    position: absolute;
+    transform: translate(-230px, 100px);
+    color: rgb(0, 0, 7);
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 0px 5px 2px rgb(177, 60, 60);
+  }
+  #col2 {
+    width: 350px;
+    height: 35vh;
+    margin: 3px;
+    border-radius: 3em;
+  }
+
+  /*  Form  */
+  #form {
+    overflow: hidden;
+    background: url("../images/color1.jpg") center/cover, no-repeat;
+    text-align: left;
+    padding-left: 10%;
+    font-size: 130%;
+  }
+  #form label,
+  input {
+    overflow: hidden;
+    font-size: 60%;
+    width: auto;
+  }
+
+  #form .submit {
+    color: rgb(0, 0, 10);
+    font-size: 80%;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+  }
+.footer {
+    display: flex;
+    background: rgba(0, 0, 0, 0.795);
+    font-size: 110%;
+    width: 100%;
+    height: auto;
+    justify-content: space-evenly;
+  }
+  .fa-facebook {
+    color: rgb(255, 255, 255);
+    background: rgb(7, 84, 156);
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .footer a {
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(217, 245, 115);
+  }
+}
