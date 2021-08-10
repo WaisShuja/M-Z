@@ -1,5 +1,6 @@
 package mz.painting.com.entity;
 
+
 public class Customer {
 
     private String name;

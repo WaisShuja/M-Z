@@ -6,8 +6,6 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-//@ComponentScan(basePackages = "mz.painting.com")
-//@EntityScan(basePackages = "mz.painting.com")
 public class
 Application {
 
