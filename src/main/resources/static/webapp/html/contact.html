@@ -39,27 +39,27 @@
 
 <!--  Form  -->
 <div id="form">
-    <form action="/data" method="POST">
+    <form action="/data" method="POST" th:Object="${formFields}" th:action="${/submitForm}">
         <br />
 
-        <label for="name">Your Name:</label><br />
-        <input type="text" value="name"  placeholder="" /><br />
+        <label for="name" th:text="#{name}">Your Name:</label><br />
+        <input type="text" th:field="*{name}"/>
 
-        <label for="suburb">Your Suburb</label><br />
-        <input type="text" name="suburb" id="suburb" placeholder="" /><br />
+        <label for="suburb" th:text="#{suburb}">Your Suburb</label><br />
+        <input type="text" th:field="*{suburb}"  placeholder="" /><br />
 
-        <label for="email">Email</label><br />
-        <input type="email" value="email"  placeholder="Email" /><br />
+        <label for="email" th:text="#{email}">Email</label><br />
+        <input type="email" th:field="*{email}"/><br />
 
-        <label for="phone">Phone</label><br />
-        <input type="tel" value="phone" id="phone" placeholder="+61" /><br />
+        <label for="phone" th:text="#{phone}">Phone</label><br />
+        <input type="tel" th:field="*{phone}"/><br />
 
-        <label>Please tell us how we can help</label>
+        <label for="text" th:text="note">Please tell us how we can help</label>
         <br />
-        <textarea type="text" name="textarea" rows="10" cols="40"></textarea><br />
+        <textarea type="text" th:field="*{note}" rows="10" cols="40"></textarea><br />
 
         <div>
-            <input class="submit" type="submit" value="Submit" />
+            <input class="submit" th:text="#{submit}" value="Submit" />
             <br /><br />
         </div>
     </form>
