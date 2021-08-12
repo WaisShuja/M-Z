@@ -42,7 +42,7 @@
 
 <!--  Body Page -->
 
-<div class="allPage">
+<!--<div class="allPage">-->
 
     <h2 style="color: rgb(136, 36, 36); margin: 0; padding: 0"> Skills & Capabilities</h2>
 
@@ -74,31 +74,31 @@
     <br />
     <br />
 
+<!--<p th:text="model: ${savedUser}"></p>-->
+
 
 <!--    Form -->
 
     <div id="form">
-        <form action="/data" method="POST">
+        <form  method="POST"  th:each="input: ${user}" th:action="@{/registerUser}">
             <br />
-
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             <label for="name">Your Name:</label><br />
-            <input type="text" name="name" id="name" placeholder="" /><br />
+            <input type="text" th:text="${input.name}"  placeholder="" /><br />
 
             <label for="suburb">Your Suburb</label><br />
-            <input type="text" name="suburb" id="suburb" placeholder="" /><br />
+            <input type="text" th:text="${input.suburb}" id="suburb" placeholder="" /><br />
 
             <label for="">Email</label><br />
-            <input type="email" name="email" id="" placeholder="" /><br />
+            <input type="email" th:text="${input.email}" id="" placeholder="" /><br />
 
             <label for="phone">Phone</label><br />
-            <input type="tel" name="phone" id="phone" placeholder="" /><br />
+            <input type="tel" th:text="${input.phone}" id="phone" placeholder="" /><br />
 
             <label>Please tell us how we can help</label>
             <br />
-            <textarea type="text" name="textarea" rows="10" cols="40"></textarea
+            <textarea type="text" th:text="${input.text}" rows="10" cols="40"></textarea
             ><br />
-
-
             <div>
                 <input class="submit" type="submit" value="Submit"  />
                 <br /><br />
@@ -113,10 +113,10 @@
     <a class="fa fa-facebook" style="color:rgb(241, 243, 239);" href="https://www.facebook.com/M&Z.painting.au/" target="_blank"></a>
 <!--    Email-->
     <a href="mailto:mz_painting@yahoo.com" class="email"> mz_painting@yahoo.com</a>
-    <img src="../images/fBlue.png" alt="facebook" width="30px" />
-    </a> -->
+    <img src="/webapp/images/fBlue.png" alt="facebook" width="30px" />
+    </a>
 
-    <p>&COPY;M&ZP-R 2020</p>
+    <p>&COPY;M&Z 2022</p>
 </div>
 </body>
 </html>

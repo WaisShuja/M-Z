@@ -1,18 +1,35 @@
-package mz.painting.com.entity;
+package mz.painting.com.entities;
 
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Customer {
 
+    @Id
+    private int id;
     private String name;
     private String suburb;
     private String email;
     private String phone;
+    private String text;
 
-    public Customer(String name, String suburb, String email, String phone){
+    public Customer(int id,String name, String suburb, String email, String phone, String text){
+        this.id = id;
         this.name = name;
         this.suburb = suburb;
         this.email = email;
         this.phone = phone;
+        this.text = text;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -45,5 +62,13 @@ public class Customer {
 
     public void setPhone(String phone) {
         this.phone = phone;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
     }
 }

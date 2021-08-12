@@ -10,7 +10,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @ComponentScan(basePackages = "mz.painting.com")
-public class Configurations implements WebMvcConfigurer {
+public class ApplicationConfig implements WebMvcConfigurer {
 
 
     /*@Override
@@ -26,5 +26,9 @@ public class Configurations implements WebMvcConfigurer {
         resolver.setSuffix(".html");
         return resolver;
     }*/
+
+//    Disabling the CSRF
+
+
 
 }

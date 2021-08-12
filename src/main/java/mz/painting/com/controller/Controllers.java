@@ -9,23 +9,25 @@ public class Controllers {
 
     @GetMapping("/home")
     public ModelAndView home(){
-        var model = new ModelAndView();
-        model.setViewName("index");
-        return model;
+        System.out.println("User is in Homepage");
+        return new ModelAndView("index");
     }
 
     @GetMapping("/service")
     public ModelAndView service(){
+        System.out.println("User is in Service Page");
         return new ModelAndView("service");
     }
 
     @GetMapping("/about")
     public ModelAndView about(){
+        System.out.println("User is in About page");
         return new ModelAndView("about");
     }
 
     @GetMapping("/contact")
     public ModelAndView contact(){
+        System.out.println("User is Contact page");
         return new ModelAndView("contact");
     }
 }
