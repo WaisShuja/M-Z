@@ -2,12 +2,14 @@ package mz.painting.com.entities;
 
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Customer {
 
     @Id
+    @GeneratedValue
     private int id;
     private String name;
     private String suburb;
@@ -15,14 +17,14 @@ public class Customer {
     private String phone;
     private String text;
 
-    public Customer(int id,String name, String suburb, String email, String phone, String text){
+    /*public Customer(int id,String name, String suburb, String email, String phone, String text){
         this.id = id;
         this.name = name;
         this.suburb = suburb;
         this.email = email;
         this.phone = phone;
         this.text = text;
-    }
+    }*/
 
     public int getId() {
         return id;

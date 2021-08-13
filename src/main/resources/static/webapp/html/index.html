@@ -80,24 +80,24 @@
 <!--    Form -->
 
     <div id="form">
-        <form  method="POST"  th:each="input: ${user}" th:action="@{/registerUser}">
+        <form action="/registerUser" th:action="@{/registerUser}"  th:object="${saveUser}" method="POST">
             <br />
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
             <label for="name">Your Name:</label><br />
-            <input type="text" th:text="${input.name}"  placeholder="" /><br />
+            <input type="text" th:field="*{name}"  placeholder="" /><br />
 
             <label for="suburb">Your Suburb</label><br />
-            <input type="text" th:text="${input.suburb}" id="suburb" placeholder="" /><br />
+            <input type="text"  th:field="*{suburb}"  placeholder="" /><br />
 
-            <label for="">Email</label><br />
-            <input type="email" th:text="${input.email}" id="" placeholder="" /><br />
+            <label for="email">Email</label><br />
+            <input type="email" th:field="*{email}"  placeholder="" /><br />
 
             <label for="phone">Phone</label><br />
-            <input type="tel" th:text="${input.phone}" id="phone" placeholder="" /><br />
+            <input type="tel" th:field="*{phone}" placeholder="" /><br />
 
             <label>Please tell us how we can help</label>
             <br />
-            <textarea type="text" th:text="${input.text}" rows="10" cols="40"></textarea
+            <textarea type="text" th:field="*{text}" rows="10" cols="40"></textarea
             ><br />
             <div>
                 <input class="submit" type="submit" value="Submit"  />
