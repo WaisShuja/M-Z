@@ -25,9 +25,4 @@ public class Controllers {
         return new ModelAndView("about");
     }
 
-    @GetMapping("/contact")
-    public ModelAndView contact(){
-        System.out.println("User is Contact page");
-        return new ModelAndView("contact");
-    }
 }

@@ -4,6 +4,8 @@ package mz.painting.com.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.*;
+
 
 @Entity
 public class Customer {
@@ -11,8 +13,13 @@ public class Customer {
     @Id
     @GeneratedValue
     private int id;
+
+    @NotNull(message = "{name.not.null}")
+    @Size(min = 1, max = 15, message = "{name.size}")
     private String name;
+    @NotNull(message = "{field.not.empty}")
     private String suburb;
+    @NotNull
     private String email;
     private String phone;
     private String text;
@@ -25,6 +32,7 @@ public class Customer {
         this.phone = phone;
         this.text = text;
     }*/
+
 
     public int getId() {
         return id;
@@ -72,5 +80,17 @@ public class Customer {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", suburb='" + suburb + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", text='" + text + '\'' +
+                '}';
     }
 }

@@ -80,19 +80,18 @@
 <!--    Form -->
 
     <div id="form">
-        <form action="/registerUser" th:action="@{/registerUser}"  th:object="${saveUser}" method="POST">
+        <form action="registerUser" th:action="@{/registerUser}"  th:object="${saveUser}" method="POST">
             <br />
-            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-            <label for="name">Your Name:</label><br />
+            <label>Your Name:</label><br />
             <input type="text" th:field="*{name}"  placeholder="" /><br />
 
-            <label for="suburb">Your Suburb</label><br />
+            <label >Your Suburb</label><br />
             <input type="text"  th:field="*{suburb}"  placeholder="" /><br />
 
-            <label for="email">Email</label><br />
+            <label >Email</label><br />
             <input type="email" th:field="*{email}"  placeholder="" /><br />
 
-            <label for="phone">Phone</label><br />
+            <label >Phone</label><br />
             <input type="tel" th:field="*{phone}" placeholder="" /><br />
 
             <label>Please tell us how we can help</label>
@@ -113,7 +112,7 @@
     <a class="fa fa-facebook" style="color:rgb(241, 243, 239);" href="https://www.facebook.com/M&Z.painting.au/" target="_blank"></a>
 <!--    Email-->
     <a href="mailto:mz_painting@yahoo.com" class="email"> mz_painting@yahoo.com</a>
-    <img src="/webapp/images/fBlue.png" alt="facebook" width="30px" />
+    <img src="/webapp/images/fBlue.png" alt="facebook" width="20px" />
     </a>
 
     <p>&COPY;M&Z 2022</p>
