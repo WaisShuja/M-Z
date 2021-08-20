@@ -4,6 +4,7 @@ package mz.painting.com.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.*;
 
 
@@ -15,7 +16,7 @@ public class Customer {
     private int id;
 
     @NotNull(message = "{name.not.null}")
-    @Size(min = 1, max = 15, message = "{name.size}")
+    @Size(min = 1, max = 25, message = "{name.size}")
     private String name;
     @NotNull(message = "{field.not.empty}")
     private String suburb;

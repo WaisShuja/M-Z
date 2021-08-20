@@ -20,12 +20,13 @@ import javax.validation.Valid;
     private UserRepository userRepository;
 
 
+
     @PostMapping("/registerUser")
     public ModelAndView user(@Valid @ModelAttribute Customer customer, BindingResult result, ModelMap model){
         System.out.println("User in registration page..");
         userRepository.save(customer);
         model.addAttribute("saveUser", customer);
-        return new ModelAndView("index");
+        return new ModelAndView("service");
     }
 
 }
