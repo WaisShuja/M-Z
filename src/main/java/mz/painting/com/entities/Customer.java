@@ -12,15 +12,15 @@ import javax.validation.constraints.*;
 public class Customer {
 
     @Id
-    @GeneratedValue
+//    @GeneratedValue
     private int id;
 
-    @NotNull(message = "{name.not.null}")
-    @Size(min = 1, max = 25, message = "{name.size}")
+//    @NotNull(message = "{name.not.null}")
+//    @Size(min = 1, max = 25, message = "{name.size}")
     private String name;
-    @NotNull(message = "{field.not.empty}")
+//    @NotNull(message = "{field.not.empty}")
     private String suburb;
-    @NotNull
+//    @NotNull
     private String email;
     private String phone;
     private String text;

@@ -28,5 +28,12 @@ import javax.validation.Valid;
         model.addAttribute("saveUser", customer);
         return new ModelAndView("service");
     }
+    @GetMapping("/registerUser")
+    public ModelAndView getUser(@Valid @ModelAttribute Customer customer, BindingResult result, ModelMap model){
+        System.out.println("User in registration page..");
+        userRepository.save(customer);
+        model.addAttribute("saveUser", customer);
+        return new ModelAndView("service");
+    }
 
 }
