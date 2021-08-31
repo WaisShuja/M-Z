@@ -1,0 +1,22 @@
+        <form action="registerUser" th:action="@{/registerUser}"  th:object="${saveUser}" method="POST">
+            <br />
+            <label>Your Name:</label><br />
+            <input type="text" th:field="*{name}"  placeholder="" /><label th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Error Name</label><br>
+
+
+            <label >Your Suburb</label><br />
+            <input type="text"  th:field="*{suburb}"  placeholder="" /><label th:if="${#fields.hasErrors('suburb')}" th:errors="*{name}">Error Suburb</label><br />
+
+            <label>Email</label><br/>
+            <input type="email" th:field="*{email}"  placeholder="" /><label th:if="${#fields.hasErrors('email')} th:errors="*{email}> </label><br />
+
+            <label>Phone</label><br/>
+            <input type="tel" th:field="*{phone}" placeholder="" /> <label th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></label><br />
+
+
+            <label>Please tell us how we can help</label><br />
+            <textarea type="text" th:field="*{text}" rows="10" cols="40"></textarea><br />
+            <div>
+                <input class="submit" type="submit" value="Submit"  /><br/><br/>
+            </div>
+        </form>

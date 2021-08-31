@@ -13,7 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.validation.Valid;
 
 @Controller
-
  public class SavingUser{
 
     @Autowired
@@ -22,18 +21,12 @@ import javax.validation.Valid;
 
 
     @PostMapping("/registerUser")
-    public ModelAndView user(@Valid @ModelAttribute Customer customer, BindingResult result, ModelMap model){
+    public ModelAndView user(@ModelAttribute Customer customer, ModelMap model){
         System.out.println("User in registration page..");
         userRepository.save(customer);
         model.addAttribute("saveUser", customer);
-        return new ModelAndView("service");
-    }
-    @GetMapping("/registerUser")
-    public ModelAndView getUser(@Valid @ModelAttribute Customer customer, BindingResult result, ModelMap model){
-        System.out.println("User in registration page..");
-        userRepository.save(customer);
-        model.addAttribute("saveUser", customer);
-        return new ModelAndView("service");
+        return new ModelAndView("redirect:/service");
+
     }
 
 }
