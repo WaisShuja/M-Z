@@ -21,10 +21,11 @@ import javax.validation.Valid;
 
 
     @PostMapping("/registerUser")
-    public ModelAndView user(@ModelAttribute Customer customer, ModelMap model){
+    public ModelAndView userRegistration(@ModelAttribute Customer user, ModelMap model){
         System.out.println("User in registration page..");
-        userRepository.save(customer);
-        model.addAttribute("saveUser", customer);
+        userRepository.save(user);
+        var customer = new Customer();
+        model.addAttribute("user", user);
         return new ModelAndView("redirect:/service");
 
     }
