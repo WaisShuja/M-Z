@@ -80,23 +80,23 @@
 <!--    Form -->
 
     <div id="form">
-        <form action="registerUser" th:user="${user}" th:action="@{/registerUser}"  th:object="${saveUser}" method="POST">
+        <form action="registerUser" th:action="@{/registerUser}"  th:object="${user}" method="POST">
             <br />
             <label>Your Name:</label><br />
-            <input type="text" th:field="*{user.name}"  placeholder="" /><br>
+            <input type="text" th:field="*{name}"  placeholder="" /><br>
 
 
             <label >Your Suburb</label><br />
-            <input type="text"  th:field="*{user.suburb}"  placeholder="" /><br />
+            <input type="text"  th:field="*{suburb}"  placeholder="" /><br />
 
             <label>Email</label><br/>
-            <input type="email" th:field="*{user.email}"  placeholder="" /><br />
+            <input type="email" th:field="*{email}"  placeholder="" /><br />
 
             <label>Phone</label><br/>
-            <input type="tel" th:field="*{user.phone}" placeholder="" /><br />
+            <input type="tel" th:field="*{phone}" placeholder="" /><br />
 
             <label>Please tell us how we can help</label><br />
-            <textarea type="text" th:field="*{user.text}" rows="10" cols="40"></textarea><br />
+            <textarea type="text" th:field="*{text}" rows="10" cols="40"></textarea><br />
             <div>
                 <input class="submit" type="submit" value="Submit"  /><br/><br/>
             </div>
