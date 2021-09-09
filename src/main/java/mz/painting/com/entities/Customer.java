@@ -12,7 +12,7 @@ import javax.validation.constraints.*;
 public class Customer {
 
     @Id
-//    @GeneratedValue
+    @GeneratedValue
     private int id;
 
 //    @NotNull(message = "{name.not.null}")
@@ -25,14 +25,6 @@ public class Customer {
     private String phone;
     private String text;
 
-    /*public Customer(int id,String name, String suburb, String email, String phone, String text){
-        this.id = id;
-        this.name = name;
-        this.suburb = suburb;
-        this.email = email;
-        this.phone = phone;
-        this.text = text;
-    }*/
 
 
     public int getId() {
