@@ -20,7 +20,6 @@ import javax.validation.Valid;
 
     @GetMapping("/index")
     public String addUser(Model model){
-        System.out.println("Adding User in registration page..");
         model.addAttribute("user", new Customer());
         return "index";
 
