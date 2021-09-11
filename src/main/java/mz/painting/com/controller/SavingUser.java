@@ -18,7 +18,7 @@ import javax.validation.Valid;
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping("/index")
+    @GetMapping("/home")
     public String addUser(Model model){
         model.addAttribute("user", new Customer());
         return "index";
@@ -27,11 +27,17 @@ import javax.validation.Valid;
 
 
     @PostMapping("/registerUser")
-    public String userRegistration(@ModelAttribute Customer user, Model model){
-        System.out.println("User in registration page..");
+    public String userRegistration(@Valid @ModelAttribute("user") Customer user, BindingResult result, Model model){
+
+         if(result.hasErrors()) {
+             System.out.println("User entered false info!");
+             return "index";
+         }
+
+        System.out.println("User's been registered..");
         model.addAttribute("user", user);
         userRepository.save(user);
-        return "redirect:/index";
+        return "redirect:/home";
 
     }
 

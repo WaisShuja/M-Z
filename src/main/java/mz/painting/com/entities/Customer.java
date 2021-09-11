@@ -4,7 +4,6 @@ package mz.painting.com.entities;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
 import javax.validation.constraints.*;
 
 
@@ -18,9 +17,9 @@ public class Customer {
     @NotNull(message = "{name.not.null}")
     @Size(min = 1, max = 25, message = "{name.size}")
     private String name;
-    @NotNull(message = "{field.not.empty}")
+    @NotEmpty(message = "{field.not.empty}")
     private String suburb;
-    @NotNull
+    @NotEmpty
     private String email;
     private String phone;
     private String text;

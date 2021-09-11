@@ -7,11 +7,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class Controllers {
 
-    @GetMapping("/home")
+/*    @GetMapping("/backHome")
     public ModelAndView home(){
         System.out.println("User is in Homepage");
         return new ModelAndView("index");
-    }
+    }*/
 
     @GetMapping("/service")
     public ModelAndView service(){
