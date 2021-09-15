@@ -1,10 +1,18 @@
 /****************************** New Styling **************************************/
 /* DESKTOP SIZE FROM NOW ON */
+  .error{
+    color:red;
+
+  }
 
 @media screen and (min-width: 790px) {
   body {
     margin: 0;
     padding: 0;
+  }
+  .error{
+    color:red;
+
   }
 
   :root {
@@ -333,15 +341,6 @@
     justify-content: center;
   }
 
-  .fa-facebook {
-    color: rgb(255, 255, 255);
-    background: rgb(7, 84, 156);
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    margin: 3px 0;
-    padding: 20px;
-  }
 
   .footer a {
     color: rgba(247, 244, 57, 0.952);

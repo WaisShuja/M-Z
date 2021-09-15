@@ -83,24 +83,25 @@
         <form action="registerUser" th:action="@{/registerUser}"  th:object="${user}" method="POST">
             <br />
             <label>Your Name:</label><br />
-            <input type="text" th:field="*{name}"  placeholder="" />
-            <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p><br/>
+            <input type="text" th:field="*{name}"  placeholder="" required /> <br>
+            <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="error"></p>
 
 
             <label >Your Suburb</label><br />
-            <input type="text"  th:field="*{suburb}"  placeholder="" />
-            <p th:if="${#fields.hasErrors('suburb')}" th:errors="*{suburb}"></p><br />
+            <input type="text"  th:field="*{suburb}"  placeholder="" required /> <br>
+            <p th:if="${#fields.hasErrors('suburb')}" th:errors="*{suburb}" class="error"></p>
 
             <label>Email</label><br/>
-            <input type="email" th:field="*{email}"  placeholder="" />
-            <p th:if="${#fields.hasErrors('email')}" th:errors="*{suburb}"></p><br />
+            <input type="email" th:field="*{email}"  placeholder="" required /><br>
+            <p th:if="${#fields.hasErrors('email')}" th:errors="*{suburb}" class="error"></p>
 
             <label>Phone</label><br/>
-            <input type="tel" th:field="*{phone}" placeholder="" />
-           <!-- <label th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></label>--><br />
+            <input type="tel" th:field="*{phone}" placeholder="" /><br>
+            <p  th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"  class="error"></p>
 
             <label>Please tell us how we can help</label><br />
-            <textarea type="text" th:field="*{text}" rows="10" cols="40"></textarea><br />
+            <textarea type="text" th:field="*{text}" rows="10" cols="40"></textarea><br>
+<!--            <p th:if="${#fields.hasErrors('text')}" th:errors="*{text}" style="color:red; background:pink; display:inline"></p>-->
             <div>
                 <input class="submit" type="submit" value="Submit"  /><br/><br/>
             </div>
@@ -114,7 +115,7 @@
     <a class="fa fa-facebook" style="color:rgb(241, 243, 239);" href="https://www.facebook.com/m.z.painting.au/" target="_blank"></a>
 <!--    Email-->
     <a href="mailto:mz_painting@yahoo.com" class="email">mz_painting@yahoo.com</a>
-    <img src="/webapp/images/fBlue.png" alt="facebook" width="auto" />
+    <img src="/webapp/images/fBlue.png" alt="facebook" width="60px" height="70px" />
     </a>
 
     <p>&COPY;M&Z 2022</p>

@@ -43,13 +43,16 @@
      <form action="contacting" th:Object="${data}" th:action="@{/contacting}" method="POST">
 
         <label>Your Name:</label><br />
-        <input type="text" th:field="*{name}" placeholder="John"/></br>
+        <input type="text" th:field="*{name}" placeholder="John" required/></br>
+         <p th:if="${#fields.hasErrors('name')}" th:error="*{name}"></p>
 
         <label>Your Suburb:</label><br />
         <input type="text" th:field="*{suburb}"  placeholder="" /><br />
+         <p th:if="${#fields.hasErrors('suburb')}" th:errors="*{suburb}" required></p>
 
         <label>Email</label><br />
         <input type="email" th:field="*{email}" placeholder="example@email.com"/><br />
+         <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" required ></p>
 
         <label>Phone</label><br />
         <input type="tel" th:field="*{phone}"/><br />

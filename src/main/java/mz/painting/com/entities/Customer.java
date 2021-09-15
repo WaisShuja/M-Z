@@ -19,9 +19,11 @@ public class Customer {
     private String name;
     @NotEmpty(message = "{field.not.empty}")
     private String suburb;
-    @NotEmpty
+    @NotEmpty(message="{field.not.empty}")
     private String email;
+//    @Size(min = 9,max = 13, message = "{phone.not.correct}")
     private String phone;
+//    @Size(min =5)
     private String text;
 
 
