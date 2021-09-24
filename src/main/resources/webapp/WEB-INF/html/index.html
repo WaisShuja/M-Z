@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 
-    <link href="/webapp/css/mainStyle.css" th:href="@{/webapp/css/mainStyle.css}" rel="stylesheet" />
+    <link href="/css/mainStyle.css" th:href="@{/css/mainStyle.css}" rel="stylesheet" />
 
 </head>
 <body>
@@ -98,6 +98,10 @@
             <label>Phone</label><br/>
             <input type="tel" th:field="*{phone}" placeholder="" /><br>
             <p  th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"  class="error"></p>
+
+            <label>Today's Date</label>
+            <input type="date" th:field="*{date}"/> <br>
+            <p th:if="${#fields.hasErrors('date')}" th:errors="*{date}" class="error"></p>
 
             <label>Please tell us how we can help</label><br />
             <textarea type="text" th:field="*{text}" rows="10" cols="40"></textarea><br>

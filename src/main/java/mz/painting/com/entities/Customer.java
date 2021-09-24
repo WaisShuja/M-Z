@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.validation.constraints.*;
+import java.util.Date;
 
 
 @Entity
@@ -23,6 +24,7 @@ public class Customer {
     private String email;
 //    @Size(min = 9,max = 13, message = "{phone.not.correct}")
     private String phone;
+    private Date date;
 //    @Size(min =5)
     private String text;
 
@@ -76,6 +78,14 @@ public class Customer {
         this.text = text;
     }
 
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
     @Override
     public String toString() {
         return "Customer{" +
@@ -84,6 +94,7 @@ public class Customer {
                 ", suburb='" + suburb + '\'' +
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
+                ", date=" + date +
                 ", text='" + text + '\'' +
                 '}';
     }
