@@ -12,9 +12,11 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.Callable;
 
 @Controller
  public class SavingUser{
@@ -38,20 +40,28 @@ import java.util.Date;
     }
 
     @PostMapping("/registerUser")
-    public String userRegistration(@Valid @ModelAttribute("user") Customer user, BindingResult result, Model model){
+    public Callable <String> userRegistration(@Valid @ModelAttribute("user") Customer user, BindingResult result, Model model, HttpServletRequest request){
 
-         if(result.hasErrors()) {
-             System.out.println("User entered false info!");
-             return "index";
-         }
 
+        System.out.println("Is Async enabled ? " + request.isAsyncSupported());
+        System.out.println("Current Thread: " + Thread.currentThread().getName());
         System.out.println("User's placed a request !..");
         System.out.println("Request Date: "+ user.getDate());
 //        model.addAttribute("user", user);
 //        model.addAttribute("registerSuccess", "Thank you for contacting us, we will get back to you soon ");
-        model.addAttribute("user", user.getName());
-        userRepository.save(user);
-        return "redirect:/service";
+        return()->{
+            if(result.hasErrors()) {
+             System.out.println("User entered false info!");
+             return "index";
+         }
+
+            Thread.sleep(3000);
+            System.out.println("Thread form MVC T-E: "+ Thread.currentThread().getName());
+
+            model.addAttribute("user", user.getName());
+            userRepository.save(user);
+            return "redirect:/service";
+        };
 
     }
 

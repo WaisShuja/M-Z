@@ -3,6 +3,9 @@ package mz.painting.com.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.task.AsyncTaskExecutor;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.thymeleaf.spring5.SpringTemplateEngine;
 import org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver;
@@ -25,10 +28,22 @@ public class ApplicationConfig implements WebMvcConfigurer {
 
   @Bean
    public SpringTemplateEngine templateEngine(){
-     SpringTemplateEngine templateEngine = new SpringTemplateEngine();
+     var templateEngine = new SpringTemplateEngine();
      templateEngine.setTemplateResolver(resourceTemplateResolver());
      templateEngine.setEnableSpringELCompiler(true);
      return templateEngine;
   }
 
+  @Override
+  public void configureAsyncSupport(AsyncSupportConfigurer asyncSupportConfigurer){
+    asyncSupportConfigurer.setDefaultTimeout(5000);
+    asyncSupportConfigurer.setTaskExecutor(mvcTaskExecutor());
+  }
+
+  @Bean
+  public AsyncTaskExecutor mvcTaskExecutor(){
+    var threadPoolTaskExecutor = new ThreadPoolTaskExecutor();
+    threadPoolTaskExecutor.setThreadNamePrefix("Thread-1 ");
+    return threadPoolTaskExecutor;
+  }
 }
