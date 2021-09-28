@@ -99,7 +99,7 @@
             <input type="tel" th:field="*{phone}" placeholder="" /><br>
             <p  th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"  class="error"></p>
 
-            <label>Today's Date</label>
+            <label>Today's Date</label><br>
             <input type="date" th:field="*{date}"/> <br>
             <p th:if="${#fields.hasErrors('date')}" th:errors="*{date}" class="error"></p>
 

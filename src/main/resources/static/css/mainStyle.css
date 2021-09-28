@@ -351,6 +351,10 @@
 
 }
 
+.error{
+  color:red;
+  border:0.5px red;
+}
 
 
 
