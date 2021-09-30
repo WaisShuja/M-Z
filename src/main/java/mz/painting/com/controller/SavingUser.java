@@ -48,8 +48,9 @@ import java.util.concurrent.Callable;
         System.out.println("User's placed a request !..");
         System.out.println("Request Date: "+ user.getDate());
 //        model.addAttribute("user", user);
-//        model.addAttribute("registerSuccess", "Thank you for contacting us, we will get back to you soon ");
         return()->{
+            model.addAttribute("registerSuccess", "Thank you for contacting us, we will get back to you soon ");
+
             if(result.hasErrors()) {
              System.out.println("User entered false info!");
              return "index";

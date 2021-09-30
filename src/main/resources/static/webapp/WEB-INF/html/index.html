@@ -93,7 +93,7 @@
 
             <label>Email</label><br/>
             <input type="email" th:field="*{email}"  placeholder="" required /><br>
-            <p th:if="${#fields.hasErrors('email')}" th:errors="*{suburb}" class="error"></p>
+            <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error"></p>
 
             <label>Phone</label><br/>
             <input type="tel" th:field="*{phone}" placeholder="" /><br>

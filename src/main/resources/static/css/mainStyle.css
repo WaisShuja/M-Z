@@ -353,7 +353,6 @@
 
 .error{
   color:red;
-  border:0.5px red;
 }
 
 
@@ -1006,4 +1005,8 @@
     padding: 10px;
     color: rgb(217, 245, 115);
   }
+}
+
+.error{
+  color:red;
 }
