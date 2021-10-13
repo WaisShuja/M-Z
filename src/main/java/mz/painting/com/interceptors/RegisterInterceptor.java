@@ -9,7 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
 
-public class RegisterInterceptor extends HandlerInterceptorAdapter {
+/**
+ * Tracking the request by using its sessionID
+ */
+public class RegisterInterceptor implements HandlerInterceptor {
 
 
 
@@ -20,11 +23,12 @@ public class RegisterInterceptor extends HandlerInterceptorAdapter {
 
               if(null != request.getCookies()){
                   for (Cookie cookie: request.getCookies()){
-                      if("JSESSIONID".equals(cookie.getName())){
+                      if(cookie.getName().equals("JSESSIONID")){
                           sessionId = cookie.getValue();
                       }
                   }
               }
+
             System.out.println("Incoming request : sessionID " + sessionId + " for " + request.getRequestURI() +
                     " at " + new Date());
             return true;

@@ -4,14 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
+
 @Controller
 public class Controllers {
-
-/*    @GetMapping("/backHome")
-    public ModelAndView home(){
-        System.out.println("User is in Homepage");
-        return new ModelAndView("index");
-    }*/
 
     @GetMapping("/service")
     public ModelAndView service(){
@@ -25,4 +21,19 @@ public class Controllers {
         return new ModelAndView("about");
     }
 
-}
+    @GetMapping("/greeting")
+    public ModelAndView service1(HttpSession session){
+        System.out.println("User is in greeting Page");
+//       End User Session
+        session.setMaxInactiveInterval(1*60);
+        return new ModelAndView("greeting");
+    }
+
+    @GetMapping("/mzFacebook")
+    public String redirectFb(){
+        return "redirect:https://www.facebook.com/m.z.painting.au/";
+    }
+/*
+https://www.facebook.com/m.z.painting.au/
+
+*/ }

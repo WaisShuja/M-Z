@@ -13,13 +13,15 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.io.FileNotFoundException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.concurrent.Callable;
 
 @Controller
- public class SavingUser{
+ public class HomePageController {
 
     @Autowired
     private UserRepository userRepository;
@@ -31,25 +33,26 @@ import java.util.concurrent.Callable;
         webDataBinder.registerCustomEditor(Date.class, "date", new CustomDateEditor(new SimpleDateFormat("yyy-MM-dd"),true));
     }
 
-
-
     @GetMapping("/home")
-    public String addUser(Model model){
+    public String addUser(Model model, HttpSession session) {
+        session.setMaxInactiveInterval(10*60);
         model.addAttribute("user", new Customer());
         return "index";
     }
 
+
     @PostMapping("/registerUser")
-    public Callable <String> userRegistration(@Valid @ModelAttribute("user") Customer user, BindingResult result, Model model, HttpServletRequest request){
+    public Callable <String> userRegistration(@Valid @ModelAttribute("user") Customer user,
+                                              BindingResult result, Model model, HttpServletRequest request, HttpSession session){
 
 
         System.out.println("Is Async enabled ? " + request.isAsyncSupported());
         System.out.println("Current Thread: " + Thread.currentThread().getName());
-        System.out.println("User's placed a request !..");
-        System.out.println("Request Date: "+ user.getDate());
-//        model.addAttribute("user", user);
+        System.out.println("A customer named : " + user.getName() + " requests for a quote !..");
+        System.out.println("Date: "+ new Date() + " Request Date : " + user.getDate());
+
+
         return()->{
-            model.addAttribute("registerSuccess", "Thank you for contacting us, we will get back to you soon ");
 
             if(result.hasErrors()) {
              System.out.println("User entered false info!");
@@ -57,13 +60,12 @@ import java.util.concurrent.Callable;
          }
 
             Thread.sleep(3000);
-            System.out.println("Thread form MVC T-E: "+ Thread.currentThread().getName());
+            System.out.println("Thread form MVC T-E : "+ Thread.currentThread().getName());
 
-            model.addAttribute("user", user.getName());
+//          Display this session in RedirectedPage
+            session.setAttribute("customer", user.getName());
             userRepository.save(user);
-            return "redirect:/service";
+            return "redirect:/greeting";
         };
-
     }
-
 }

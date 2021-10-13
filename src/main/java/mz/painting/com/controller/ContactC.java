@@ -14,6 +14,7 @@ import org.springframework.web.context.request.async.DeferredResult;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.concurrent.Callable;
 
@@ -33,7 +34,8 @@ public class ContactC {
     }
 
     @PostMapping("/contacting")
-    public DeferredResult<String> contacting(@Valid  @ModelAttribute("data") Customer customer, BindingResult result, Model model, HttpServletRequest request){
+    public DeferredResult<String> contacting(@Valid  @ModelAttribute("data") Customer customer,
+                                             BindingResult result, Model model, HttpServletRequest request, HttpSession session){
 
          var stringDeferredResult = new DeferredResult<String>();
          var bindingResult = new DeferredResult<String>();
@@ -49,16 +51,18 @@ public class ContactC {
           asyncTaskExecutor.execute(() -> {
 
               try {
-                  Thread.sleep(5000);
+                  Thread.sleep(3000);
               }catch(InterruptedException e){
                   System.out.println(e.getMessage());
               }
 
               System.out.println("MVC T-E Thread: " + Thread.currentThread().getName());
               System.out.println("User registered!");
+
+//           Saving request in database
               userRepository.save(customer);
-              model.addAttribute("data", customer);
-              stringDeferredResult.setResult("service");
+              session.setAttribute("customer", customer.getName());
+              stringDeferredResult.setResult("redirect:/greeting");
 
           });
 

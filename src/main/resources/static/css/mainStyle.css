@@ -333,15 +333,7 @@
     justify-content: center;
   }
 
-  .fa-facebook {
-    color: rgb(255, 255, 255);
-    background: rgb(7, 84, 156);
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    margin: 3px 0;
-    padding: 20px;
-  }
+
 
   .footer a {
     color: rgba(247, 244, 57, 0.952);
@@ -353,6 +345,7 @@
 
 .error{
   color:red;
+  border:0.5px red;
 }
 
 
@@ -683,15 +676,7 @@
     height: auto;
     justify-content: space-evenly;
   }
-  .fa-facebook {
-    color: rgb(255, 255, 255);
-    background: rgb(7, 84, 156);
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    margin: 3px 0;
-    padding: 20px;
-  }
+
 
   .footer a {
     text-decoration: none;
@@ -991,22 +976,10 @@
     height: auto;
     justify-content: space-evenly;
   }
-  .fa-facebook {
-    color: rgb(255, 255, 255);
-    background: rgb(7, 84, 156);
-    width: 15px;
-    height: 15px;
-    text-align: center;
-    margin-top: 10px;
-    padding: 10px;
-  }
+
   .footer a {
     text-decoration: none;
     padding: 10px;
     color: rgb(217, 245, 115);
   }
-}
-
-.error{
-  color:red;
 }
